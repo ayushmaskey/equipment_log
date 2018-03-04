@@ -1,0 +1,7 @@
+<template name="Home_Page_Directory">
+  <div style="margin-top: 20px" class="ui cards">
+    {{#each event in events }}
+      {{> Event_Card event=event }}
+    {{/each}}
+  </div>
+</template>

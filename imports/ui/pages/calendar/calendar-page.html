@@ -1,0 +1,11 @@
+<template name="Calendar_Page">
+	<div class="ui raised segment container">
+		{{#if Template.subscriptionsReady}}
+			{{> Calendar}}
+		{{/if}}
+	</div>
+</template>
+
+<template name="Calendar">
+	<div id="event-calendar"></div>
+</template>

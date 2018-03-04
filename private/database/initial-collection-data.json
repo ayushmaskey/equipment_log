@@ -1,0 +1,202 @@
+{
+  "comment": "Initial contents for the BowFolios database. For development purposes only.",
+  "collections": [
+    {
+      "name": "TagCollection",
+      "contents": [
+        {
+          "name": "Hiking"
+        },
+        {
+          "name": "Beach"
+        },
+        {
+          "name": "Exploration"
+        },
+        {
+          "name": "Camping"
+        },
+        {
+          "name": "weekend"
+        },
+        {
+          "name": "allday"
+        },
+        {
+          "name": "multipleDays"
+        },
+        {
+          "name": "sunrise"
+        },
+        {
+          "name": "sunset"
+        },
+        {
+          "name": "Surfing"
+        },
+        {
+          "name": "Mountains"
+        },
+        {
+          "name": "Kayaking"
+        },
+        {
+          "name": "Food"
+        },
+        {
+          "name": "Backpacking"
+        },
+        {
+          "name": "H20"
+        }
+      ]
+    },
+    {
+      "name": "ProfileCollection",
+      "contents": [
+        {
+          "firstName": "George",
+          "lastName": "Lee",
+          "username": "gelee",
+          "email": "gelee@hawaii.edu",
+          "additional": "I teach section 3 of ICS 314..",
+          "picture": "/images/altenberg.jpg",
+          "text": "808-123-3333"
+        },
+        {
+          "firstName": "Kyungim",
+          "lastName": "Baek",
+          "username": "baek",
+          "email": "baek@hawaii.edu",
+          "additional": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
+          "picture": "/images/baek.jpg",
+          "twitter": "@kay"
+        },
+        {
+          "firstName": "Edo",
+          "lastName": "Biagioni",
+          "username": "esb",
+          "email": "esb@hawaii.edu",
+          "additional": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
+          "picture": "/images/biagioni.jpg",
+          "slack": "esb"
+        },
+        {
+          "firstName": "Kim",
+          "lastName": "Binsted",
+          "username": "binsted",
+          "email": "binsted@hawaii.edu",
+          "additional": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
+          "picture": "/images/binsted.jpg"
+        },
+        {
+          "firstName": "Henri",
+          "lastName": "Casanova",
+          "username": "henric",
+          "email": "henric@hawaii.edu",
+          "facebook": "henricasanova",
+          "additional": "I am a Professor of Information and Computer Sciences at the University of Hawaii.",
+          "picture": "/images/casanova.jpg"
+        },
+        {
+          "firstName": "Kiera",
+          "lastName": "Williams",
+          "username": "kieraw",
+          "email": "kieraw@hawaii.edu",
+          "additional": "",
+          "admin": "yes"
+        },
+        {
+          "firstName": "Natasha",
+          "lastName": "Meinzen",
+          "username": "nmeinzen",
+          "email": "nmeinzen@hawaii.edu",
+          "additional": "",
+          "admin": "yes"
+        },
+        {
+          "firstName": "Ayush",
+          "username": "amaskey",
+          "email": "amaksey@hawaii.edu",
+          "admin": "yes"
+        }
+      ]
+    },
+    {
+      "name": "MessageCollection",
+      "contents": [
+        {
+          "username": "henric",
+          "events": "hiking",
+          "message": "hello there"
+        },
+        {
+          "username": "baek",
+          "events": "hiking",
+          "message": "hi"
+        },
+        {
+          "username": "esb",
+          "events": "hiking",
+          "message": "Who is ready for diamond head hike over the break?"
+        },
+        {
+          "username": "gelee",
+          "events": "hiking",
+          "message": "I am ready for diamond head hike."
+        }
+      ]
+    },
+    {
+      "name": "EventCollection",
+      "contents": [
+        {
+          "username": "amaskey",
+          "eventName": "hiking",
+          "maxPeople": 25,
+          "eventStart": "2017-12-21T08:30",
+          "eventEnd": "2017-12-21T09:30",
+          "eventLocation": "Diamond Head",
+          "eventAdditional": "bring h2o",
+          "eventTags": "Hiking, H20, weekend",
+          "eventAttending": [
+            "amaskey",
+            "kieraw",
+            "nmeinzen"
+          ]
+        },
+        {
+          "username": "nmeinzen",
+          "eventName": "camping",
+          "maxPeople": 7,
+          "eventStart": "2017-12-21T10:30",
+          "eventEnd": "2017-12-21T11:30",
+          "eventLocation": "North Shore",
+          "eventAdditional": "something",
+          "eventTags": "Beach, allday, Surfing",
+          "eventAttending": [
+            "kieraw",
+            "nmeinzen",
+            "amaskey"
+          ]
+        },
+        {
+          "username": "kieraw",
+          "eventName": "snorkeling",
+          "maxPeople": 5,
+          "eventStart": "2017-12-23T08:30",
+          "eventEnd": "2017-12-22T10:30",
+          "eventEnd": "2017-12-25T08:30",
+          "eventLocation": "Koolau",
+          "eventAdditional": "overnight camping",
+          "eventTags": "Camping, Mountains, weekend, multipleDays",
+          "eventAttending": [
+            "amaskey",
+            "henric",
+            "esb"
+          ]
+        }
+      ]
+    }
+  ]
+}

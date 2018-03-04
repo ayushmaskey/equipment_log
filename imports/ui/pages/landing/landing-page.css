@@ -1,0 +1,68 @@
+.landing-section-1 {
+  padding-top: 15%;
+  color: #1f7ebc;
+}
+
+.landing-section-1-2{
+  background-image: url("https://image.freepik.com/free-photo/beach-at-sunset-with-an-island-background_1259-23.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.landing-section-2 {
+  padding: 20px 10px 20px 10px;
+  color: white;
+}
+
+
+.landing-section-3 {
+  background-color: #3ed489;
+  font-family: 'Raleway', sans-sherif;
+  color: #E5F9E7;
+  font-weight: 900;
+  font-size: 26px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+
+.landing-section-5 {
+  padding: 20px 10px 20px 10px;
+  color: #1f7ebc7;
+}
+
+
+.landing-section-1-welcome {
+  font-family: 'Raleway', sans-sherif;
+  font-weight: 900;
+  font-size: 150px;
+}
+
+.landing-section-header {
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-family: 'Raleway', sans-sherif;
+  font-weight: 900;
+  font-size: 26px;
+}
+
+.ui.three.column.grid.container{
+  padding-bottom: 50px;
+}
+
+.column{
+  text-align: center;
+}
+
+.border{
+  background-color: white;
+  padding-top: 5px;
+}
+
+.footer{
+  background-image: url("images/BeFunky Collage.jpg");
+  background-size: contain;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}

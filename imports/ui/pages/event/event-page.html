@@ -1,0 +1,42 @@
+<template name="Event_Page">
+  {{#if Template.subscriptionsReady}}
+  <div class="ui text container">
+    <div class="ui dividing header">
+     Event
+    </div>
+    <div class="ui three column grid container">
+
+      <div class="row">
+        <div class="column"> {{ event.name }} </div>
+        <div class="column"> {{ event.start }} </div>
+        <div class="column"> {{ event.end }} </div>
+      </div>
+      <div class="row">
+        <div class="column"> {{ event.location }} </div>
+        <div class="column"> {{ event.maxPeople }} </div>
+      </div>
+    </div>
+    <div class=" ui two column grid container">
+      <div class="row">
+        <div class="column"> {{ event.additional }} </div>
+        <div class="column"> {{ event.tags }} </div>
+    </div>
+
+
+    <div class="ui two column grid container">
+
+      <div class="row">
+        <div class="column"> <button class="ui button rsvp" type="button"> RSVP </button>  </div>
+        </div>
+      </div>
+    </div>
+
+    <div class=" ui two column admin grid container">
+    <div class="row">
+      <div class="column"> <button class="ui button edit" type="button">Edit </button> </div>
+      <div class="column"> <button class="ui button delete" type="button">Delete</button> </div>
+    </div>
+    </div>
+  </div>
+    {{/if}}
+</template>

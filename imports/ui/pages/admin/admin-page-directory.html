@@ -1,0 +1,7 @@
+<template name="Admin_Page_Directory">
+  <div style="margin-top: 20px" class="ui cards">
+    {{#each event in events }}
+      {{> Directory_Profile event=event }}
+    {{/each}}
+  </div>
+</template>

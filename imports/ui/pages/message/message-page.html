@@ -1,0 +1,38 @@
+<template name="Message_Page">
+
+	{{#if Template.subscriptionsReady}}
+
+		<div class="ui text container message-body raised segment">
+
+			<div class="ui attached basic segment">
+				<ul class="message-window">
+					{{#each recentMessages }}
+						<li class="{{#if $eq username currentUser }} mine {{/if}}">
+							<div class="ui {{ userHash username }} text-message label">
+								{{ username }}:  {{ message }}
+							</div>
+						</li>
+					{{/each }}
+				</ul>
+			</div>
+
+			<div class="ui bottom attached message-box basic segment">
+				{{#if currentUser}}
+					<form class="ui new-message form">
+
+						<div class="field">
+							<div class="ui event-dropdown fields">
+								{{> Select_Form_Control label="Choose event" required=true name="events" options=urEvents multiple=false }}
+							</div>
+							{{> TextArea_Form_Control rows="2" label=" " name="message" type="text" placeholder="Type Message" }}
+							<button class="ui primary button" type="submit">Send</button>
+						</div>
+					</form>
+				{{/if}}
+			</div>
+
+		</div>
+
+	{{/if}}
+
+</template>

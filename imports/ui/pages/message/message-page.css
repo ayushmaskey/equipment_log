@@ -1,0 +1,50 @@
+
+.text.container.message-body.raised.segment {
+  background-image:
+      radial-gradient(ellipse farthest-corner at 0 0, rgba(0,0,0,.2) 0%, rgba(62,45,177, .3) 50%,
+      rgba(255,255,255,.3) 95%), linear-gradient(to bottom, #a7cbf9, #25da8e 100%);  background-attachment: fixed;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.center.aligned.top.attached.message-header.basic.segment.header {
+  border-width: 0px;
+}
+
+.attached.basic.segment{
+  border-width: 0px;
+
+}
+.message-window {
+  list-style: none;
+  background: white;
+  margin: 0;
+  padding: 0 0 50px 0;
+  height: 300px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  overflow: scroll;
+}
+
+.bottom.attached.message-box.basic.segment {
+  border-width: 0px;
+  margin-top: 5px;
+}
+
+.new-message.form {
+}
+
+.text-message.label {
+  padding: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+}
+
+.mine {
+  text-align: right;
+  margin-left: 10%;
+}
+
+.mine.text-message.label {
+  color: white;
+  background-color: black;
+}

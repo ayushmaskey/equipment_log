@@ -1,0 +1,49 @@
+<template name="Create_Event_Page">
+
+    {{#if Template.subscriptionsReady}}
+
+      <div class="ui text container segment">
+        <div class="ui dividing header">
+          Create Event
+        </div>
+        <form class="ui equal width form event-data-form {{ errorClass }}">
+
+          <div class="two fields">
+            <div class="field">
+              {{> Text_Form_Control label="Name: " placeholder=" " name="eventName" required=true errorMessage=(fieldError "eventName")}}
+            </div>
+            <div class="field">
+              {{> Select_Form_Control label="Max Attendees" required=true options=maxPeoples name="maxPeople" errorMessage=(fieldError "maxPeople")}}
+            </div>
+          </div>
+
+          <div class="two fields">
+            <div class="field">
+              {{> Text_Form_Control label="Start: " placeholder="yyyy/mm/dd " name="startDate" required=true errorMessage=(fieldError "startDate")}}
+            </div>
+            <div class="field">
+              {{> Text_Form_Control required=true  placeholder="hh:mm am/pm" name="startTime" errorMessage=(fieldError "startTime")}}
+            </div>
+          </div>
+
+          <div class="two fields">
+            <div class="field">
+              {{> Text_Form_Control label="End: " placeholder="2017/12/23" name="startDate" required=true errorMessage=(fieldError "startDate")}}
+            </div>
+            <div class="field">
+              {{> Text_Form_Control required=true  placeholder="10:30AM" name="startTime" errorMessage=(fieldError "startTime")}}
+            </div>
+          </div>
+
+              {{> Text_Form_Control label="Location: " placeholder=" " name="eventLocation" required=true errorMessage=(fieldError "eventLocation")}}
+          {{> TextArea_Form_Control label="Additional Information" name="eventAdditional" placeholder="Additional information about event" errorMessage=(fieldError "eventAdditional")}}
+          {{> Select_Form_Control label="Tags"  options=eventTag name="Tags" multiple=true}}
+
+        <button class="ui primary button" type="submit">Create Event</button>
+
+        </form>
+      </div>
+
+    {{/if}}
+
+  </template>

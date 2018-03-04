@@ -1,0 +1,48 @@
+<template name="Profile_Page">
+
+	{{#if Template.subscriptionsReady}}
+
+		<div class="ui text container segment">
+			<div class="ui dividing header">
+				Profile
+			</div>
+			<form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
+
+				<div class="fields">
+					{{> Text_Form_Control label="First" placeholder="First name" required=true value=profile.firstName errorMessage=(fieldError "firstName")}}
+					{{> Text_Form_Control label="Last" placeholder="Last name" value=profile.lastName errorMessage=(fieldError "lastName")}}
+				</div>
+
+				<div class="ui basic segment">
+					<div class="ui dividing header">Contact</div>
+
+					<div class="fields">
+						{{> Message_Form_Control label="Email" icon="mail outline" required=true username=getUsername}}
+						{{> Social_Network_Form_Control label="Text" icon="text telephone" placeholder="ddd-ddd-dddd" value=profile.text errorMessage=(fieldError "phone")}}
+						{{> Text_Form_Control label="Picture" icon="image" placeholder="picture" value=profile.picture errorMessage=(fieldError "picture")}}
+
+					</div>
+
+					<div class="fields">
+						{{> Social_Network_Form_Control label="Slack" icon="slack" placeholder="slack" value=profile.slack errorMessage=(fieldError "slack")}}
+						{{> Social_Network_Form_Control label="Facebook" icon="facebook" placeholder="facebook" value=profile.facebook errorMessage=(fieldError "facebook")}}
+						{{> Social_Network_Form_Control label="Twitter" icon="twitter" placeholder="@twitter" value=profile.twitter errorMessage=(fieldError "twitter")}}
+
+					</div>
+				</div>
+
+				{{> TextArea_Form_Control label="Additional" value=profile.additional placeholder="Additional information about urself" errorMessage=(fieldError "additional")}}
+
+
+				<button class="ui primary button" type="submit">Update</button>
+				{{#if displaySuccessMessage}}
+					<div class="ui success message">
+						<p>Profile data successfully updated.</p>
+					</div>
+				{{/if}}
+			</form>
+		</div>
+
+	{{/if}}
+
+</template>

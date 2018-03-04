@@ -1,0 +1,51 @@
+<template name="Edit_Event_Page">
+
+  {{#if Template.subscriptionsReady}}
+
+    <div class="ui text container segment">
+      <div class="ui dividing header">
+        Edit Event
+      </div>
+      <form class="ui equal width form  event-data-form {{ successClass }} {{ errorClass }}">
+
+        <div class="two fields">
+          <div class="field">
+            {{> Text_Form_Control label="Name:  " placeholder=" " name="eventName" required=true errorMessage=(fieldError "eventName")}}
+          </div>
+          <div class="field">
+            {{> Select_Form_Control label="Max Attendees" required=true options=maxPeoples name="maxPeople" errorMessage=(fieldError "maxPeople")}}
+          </div>
+        </div>
+
+        <div class="fields">
+          <div class="field">
+            <label> Start </label>
+            <input id="event" type="Date" required=required name="startDate">
+          </div>
+          <div class="field">
+            <input id="event" type="Time" required=required name="startTime">
+          </div>
+        </div>
+
+        <div class="two fields">
+          <div class="field">
+            <label> End </label>
+            <input id="event" type="Date" required=required name="endDate">
+          </div>
+          <div class="field">
+            <input id="event" type="Time" required=required name="endTime">
+          </div>
+        </div>
+
+        {{> Text_Form_Control label="Location: " placeholder=" " name="eventLocation" required=true errorMessage=(fieldError "eventLocation")}}
+        {{> TextArea_Form_Control label="Additional Information" name="eventAdditional" placeholder="Additional information about event" errorMessage=(fieldError "eventAdditional")}}
+        {{> Select_Form_Control label="Tags"  options=eventTag name="Tags" multiple=true}}
+
+				<button class="ui primary button" type="submit">Edit Event</button>
+
+			</form>
+		</div>
+
+	{{/if}}
+
+</template>

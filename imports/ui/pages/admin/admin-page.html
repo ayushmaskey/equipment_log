@@ -1,0 +1,39 @@
+<template name="Admin_Page">
+
+
+	{{#if Template.subscriptionsReady}}
+  {{#if isInRole 'admin'}}
+
+      <div class="ui text container segment">
+        <div style="text-align: center" class="ui dividing header">
+          Administrator
+        </div>
+      </div>
+
+  {{> Admin_Page_Directory profiles=profiles }}
+
+  {{#each event in events}}
+  {{> Event_Card event=event }}
+  {{/each}}
+
+  <div style="margin-top: 20px" class="ui cards">
+    <button class="ui primary button" type="submit">Remove Post</button>
+    <button class="ui primary button" type="submit">Give Feedback</button>
+    <button class="ui primary button" type="submit">Remove Tag</button>
+  </div>
+
+
+    {{#if displaySuccessMessage}}
+    <div class="ui success message">
+      <p>Flagged post successfully handled.</p>
+    </div>
+    {{/if}}
+
+  {{else}}
+    <h1 style="text-align: center">Not Authorized to View Page</h1>
+  {{/if}}
+
+  {{/if}}
+
+</template>
+

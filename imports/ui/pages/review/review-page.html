@@ -1,0 +1,33 @@
+<template name="Review_Page">
+  {{#if Template.subscriptionsReady}}
+    <div class="ui text container segment">
+
+      <div class="ui dividing header">
+        Review
+      </div>
+
+      <div class="row">
+      <h2> What does a review entail? </h2>
+      <p> A review of a user or event means that an admin will personally check all submissions to check for inappropriate, harmful, or other unsuitable content. Any user or event containing such content will be removed from the site. </p>
+      </div>
+
+      <form style="margin-top: 10px"  class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
+      <div class="field">
+      {{> Text_Form_Control label="Name of user/event" placeholder=" "  value=profile.lastName errorMessage=(fieldError "reviewee")}}
+      </div>
+        <div class="field">
+      {{> TextArea_Form_Control label="Details" value=profile.bio placeholder="Why do you think this user/event merits a review?" errorMessage=(fieldError "details")}}
+       </div>
+
+        <button class="ui primary button" type="submit">Submit</button>
+        {{#if displaySuccessMessage}}
+          <div class="ui success message">
+            <p>Review successfully submitted.</p>
+          </div>
+        {{/if}}
+      </form>
+    </div>
+
+  {{/if}}
+
+</template>

@@ -1,0 +1,21 @@
+<template name="User_Header">
+  <div class="ui top fixed borderless inverted teal menu">
+    <div class="ui container">
+      <a class="{{isActiveRoute "Home_Page"}} item" href="{{pathFor "Home_Page" username=routeUserName}}"><h1>Island Wanderer</h1></a>
+      <a class="{{isActiveRoute "Profile_Page"}} item" href="{{pathFor "Profile_Page" username=routeUserName}}">Profile</a>
+
+      <a class="{{isActiveRoute "Message_Page"}} item" href="{{pathFor "Message_Page" username=routeUserName}}">Message</a>
+
+
+      <a class="{{isActiveRoute "Calendar_Page"}} item" href="{{pathFor "Calendar_Page" username=routeUserName}}">Calendar</a>
+
+      {{#if isInRole 'admin'}}
+      <a class="{{isActiveRoute "Admin_Page"}} item" href="{{pathFor "Admin_Page" username=routeUserName}}">Admin Page</a>
+      {{/if}}
+
+      <a class="{{isActiveRoute "Admin_Page"}} item" href="{{pathFor "Admin_Page" username=routeUserName}}">Administration</a>
+
+      <div class="right aligned item">{{> Cas_Login }}</div>
+    </div>
+  </div>
+</template>

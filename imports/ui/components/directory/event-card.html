@@ -1,0 +1,20 @@
+<template name="Event_Card">
+  {{#if Template.subscriptionsReady}}
+  <div class="ui card">
+    <div class="content">
+      <a class="{{isActiveRoute "Event_Page"}}" href="{{pathFor "Event_Page" username=routeUserName _id=event_.id}}"> {{ event.eventName }} </a>
+    </div>
+      <div class="meta">
+        {{ event.username}}
+      </div>
+      <div class="description">
+        <div class="column">
+          {{ event.eventLocation }}
+          {{ event.eventAttending.length }} attending
+        </div>
+        {{ event.eventStart }}
+        {{ event.eventEnd }}
+      </div>
+  </div>
+{{/if}}
+</template>
