@@ -3,12 +3,21 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 // import { _ } from 'meteor/underscore';
 import { Profiles } from '/imports/api/profile/ProfileCollection';
+import { Employees } from '../../../api/kphc-employee/EmployeeCollection';
+import { Logz } from '../../../api/kphc-log/LogCollection';
+import { Equipments } from '../../../api/kphc-equipment/EquipmentCollection';
+import { Reservations } from '../../../api/kphc-reservation/ReservationCollection';
 
 const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 
 Template.Profile_Page.onCreated(function onCreated() {
   this.subscribe(Profiles.getPublicationName());
+  this.subscribe(Employees.getPublicationName());
+  this.subscribe(Logz.getPublicationName());
+  this.subscribe(Equipments.getPublicationName());
+  this.subscribe(Reservations.getPublicationName());
+
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displaySuccessMessage, false);
   this.messageFlags.set(displayErrorMessages, false);

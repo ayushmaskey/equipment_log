@@ -4,4 +4,7 @@ import '/imports/api/profile';
 import '/imports/api/tag';
 import '/imports/api/message';
 import '/imports/api/event';
-
+import '/imports/api/kphc-employee';
+import '/imports/api/kphc-equipment';
+import '/imports/api/kphc-log';
+import '/imports/api/kphc-reservation';

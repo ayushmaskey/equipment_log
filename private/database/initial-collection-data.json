@@ -1,5 +1,5 @@
 {
-  "comment": "Initial contents for the BowFolios database. For development purposes only.",
+  "comment": "Initial contents for the Chronicle database. For development purposes only.",
   "collections": [
     {
       "name": "TagCollection",
@@ -18,36 +18,6 @@
         },
         {
           "name": "weekend"
-        },
-        {
-          "name": "allday"
-        },
-        {
-          "name": "multipleDays"
-        },
-        {
-          "name": "sunrise"
-        },
-        {
-          "name": "sunset"
-        },
-        {
-          "name": "Surfing"
-        },
-        {
-          "name": "Mountains"
-        },
-        {
-          "name": "Kayaking"
-        },
-        {
-          "name": "Food"
-        },
-        {
-          "name": "Backpacking"
-        },
-        {
-          "name": "H20"
         }
       ]
     },
@@ -71,54 +41,6 @@
           "additional": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
           "picture": "/images/baek.jpg",
           "twitter": "@kay"
-        },
-        {
-          "firstName": "Edo",
-          "lastName": "Biagioni",
-          "username": "esb",
-          "email": "esb@hawaii.edu",
-          "additional": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
-          "picture": "/images/biagioni.jpg",
-          "slack": "esb"
-        },
-        {
-          "firstName": "Kim",
-          "lastName": "Binsted",
-          "username": "binsted",
-          "email": "binsted@hawaii.edu",
-          "additional": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
-          "picture": "/images/binsted.jpg"
-        },
-        {
-          "firstName": "Henri",
-          "lastName": "Casanova",
-          "username": "henric",
-          "email": "henric@hawaii.edu",
-          "facebook": "henricasanova",
-          "additional": "I am a Professor of Information and Computer Sciences at the University of Hawaii.",
-          "picture": "/images/casanova.jpg"
-        },
-        {
-          "firstName": "Kiera",
-          "lastName": "Williams",
-          "username": "kieraw",
-          "email": "kieraw@hawaii.edu",
-          "additional": "",
-          "admin": "yes"
-        },
-        {
-          "firstName": "Natasha",
-          "lastName": "Meinzen",
-          "username": "nmeinzen",
-          "email": "nmeinzen@hawaii.edu",
-          "additional": "",
-          "admin": "yes"
-        },
-        {
-          "firstName": "Ayush",
-          "username": "amaskey",
-          "email": "amaksey@hawaii.edu",
-          "admin": "yes"
         }
       ]
     },
@@ -186,7 +108,6 @@
           "maxPeople": 5,
           "eventStart": "2017-12-23T08:30",
           "eventEnd": "2017-12-22T10:30",
-          "eventEnd": "2017-12-25T08:30",
           "eventLocation": "Koolau",
           "eventAdditional": "overnight camping",
           "eventTags": "Camping, Mountains, weekend, multipleDays",
@@ -195,6 +116,78 @@
             "henric",
             "esb"
           ]
+        }
+      ]
+    },
+    {
+      "name": "EmployeeCollection",
+      "contents": [
+        {
+          "firstname": "Ayush",
+          "lastName": "Maskey",
+          "username": "amaskey",
+          "email": "amaskey@kphc.org",
+          "employeeId": "12345",
+          "additional": "some additional stuffs"
+        },
+        {
+          "firstname": "Jeff",
+          "lastName": "Maskey",
+          "username": "Cash",
+          "email": "jcash@kphc.org",
+          "employeeId": "54321"
+        }
+      ]
+    },
+    {
+      "name": "EquipmentCollection",
+      "contents": [
+        {
+          "type": "laptop",
+          "name": "kphc-it-2016",
+          "os": "windows 2010",
+          "barcode": "76279",
+          "serial": "abd123",
+          "addition": "laptop bag, mouse, charger"
+        },
+        {
+          "type": "verizon mifi",
+          "serial": "v123",
+          "barcode": "985698",
+          "phone": "808-586-8856"
+        },
+        {
+          "type": "HDMI cable",
+          "barcode": "66553"
+
+        }
+      ]
+    },
+    {
+      "name": "LogCollection",
+      "contents": [
+        {
+          "employeeId": "54321",
+          "barcode": "985698",
+          "start": "2017-12-23T08:30",
+          "end": "2017-12-23T10:30",
+          "comment": "good"
+        },
+        {
+          "employeeId": "12345",
+          "barcode": "76279",
+          "start": "2017-12-23T10:30",
+          "end": "2017-12-23T12:30",
+          "comment": "bad"
+        }
+      ]
+    },
+    {
+      "name": "ReservationCollection",
+      "contents": [
+        {
+          "employeeId": "12345",
+          "needs": "laptop, hdmi, remote"
         }
       ]
     }

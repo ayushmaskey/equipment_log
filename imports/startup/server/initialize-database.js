@@ -3,8 +3,12 @@ import { Profiles } from '/imports/api/profile/ProfileCollection';
 import { Tags } from '/imports/api/tag/TagCollection';
 import { Messages } from '/imports/api/message/MessageCollection';
 import { Events } from '/imports/api/event/EventCollection.js';
+import { Employees } from '/imports/api/kphc-employee/EmployeeCollection.js';
+import { Logz } from '/imports/api/kphc-log/LogCollection.js';
+import { Equipments } from '/imports/api/kphc-equipment/EquipmentCollection.js';
+import { Reservations } from '/imports/api/kphc-reservation/ReservationCollection.js';
 import { _ } from 'meteor/underscore';
-import { Roles } from 'meteor/alanning:roles';
+// import { Roles } from 'meteor/alanning:roles';
 
 /* global Assets */
 
@@ -16,6 +20,8 @@ import { Roles } from 'meteor/alanning:roles';
  * @param collection The collection of interest.
  */
 function getDefinitions(restoreJSON, collection) {
+  const x = _.find(restoreJSON.collections, obj => obj.name === collection).contents;
+  console.log(x);
   return _.find(restoreJSON.collections, obj => obj.name === collection).contents;
 }
 
@@ -25,6 +31,7 @@ function getDefinitions(restoreJSON, collection) {
  * @param restoreJSON The structure containing all of the definitions.
  */
 function restoreCollection(collection, restoreJSON) {
+  console.log(collection._collectionName);
   const definitions = getDefinitions(restoreJSON, collection._collectionName);
   console.log(`Defining ${definitions.length} ${collection._collectionName} documents.`);
   _.each(definitions, definition => collection.define(definition));
@@ -32,7 +39,7 @@ function restoreCollection(collection, restoreJSON) {
 
 Meteor.startup(() => {
   /** Only initialize database if it's empty. */
-  const collectionList = [Tags, Profiles, Messages, Events];
+  const collectionList = [Tags, Profiles, Messages, Events, Employees, Equipments, Logz, Reservations];
   const totalDocuments = _.reduce(collectionList, function reducer(memo, collection) {
     return memo + collection.count();
   }, 0);
